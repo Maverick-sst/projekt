@@ -1,0 +1,134 @@
+{
+  "project": {
+    "name": "STRATUM",
+    "description": "A unified multi-agent orchestration and governance layer for enterprise systems.",
+    "app_type": "dashboard",
+    "theme": "light",
+    "archetype": "4 (Swiss & High-Contrast)",
+    "vibe": "Objective, rigid, functional, authoritative, secure"
+  },
+  "colors": {
+    "primary": "#002FA7",
+    "primary_hover": "#002080",
+    "secondary": "#0F172A",
+    "secondary_hover": "#1E293B",
+    "accent_critical": "#FF2A04",
+    "accent_warning": "#FFC000",
+    "accent_success": "#059669",
+    "background": "#FFFFFF",
+    "surface": "#F8FAFC",
+    "surface_hover": "#F1F5F9",
+    "border": "#E2E8F0",
+    "border_hover": "#CBD5E1",
+    "text_primary": "#0F172A",
+    "text_secondary": "#475569",
+    "text_inverse": "#FFFFFF"
+  },
+  "typography": {
+    "heading_font": "Manrope",
+    "body_font": "IBM Plex Sans",
+    "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none font-black",
+    "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight font-bold",
+    "h3": "text-xl sm:text-2xl tracking-tight font-bold",
+    "h4": "text-lg sm:text-xl font-semibold",
+    "body": "text-base leading-relaxed font-normal text-[#475569]",
+    "small": "text-sm text-[#475569]",
+    "overline": "uppercase text-xs tracking-[0.2em] font-bold text-[#0F172A]"
+  },
+  "spacing_and_layout": {
+    "spacing_scale": "p-1, p-2, p-4, p-6, p-8, p-12, p-16, p-24, p-32",
+    "grid_mode": "Control Room Grid",
+    "grid_classes": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4",
+    "container_padding": "p-6 lg:p-8",
+    "alignment": "Left-align for dense data, center-align only for empty states or explicit modular hero blocks"
+  },
+  "surfaces_and_borders": {
+    "border_radius": "rounded-none",
+    "border_width": "border border-[#E2E8F0]",
+    "shadows": {
+      "default": "shadow-none",
+      "hover": "shadow-sm"
+    },
+    "glassmorphism": "Not recommended for this archetype. Use solid, opaque surfaces.",
+    "surface_style": "Grid Borders (The 'Technical' Look): Expose the skeleton. Containers have border-collapse style layout. Items have 1px borders."
+  },
+  "components": {
+    "buttons": "Flat, sharp edges (rounded-none). High contrast. Primary uses International Klein Blue, stark white text.",
+    "cards": "Cardless or 1px border. No shadows. Dense padding (p-4 or p-6).",
+    "inputs": "Shadcn standard but with rounded-none and 1px borders. Focus ring must be primary blue and crisp.",
+    "navigation": "Collapsible left sidebar for F-pattern scanning. Top header for breadcrumbs and user profile. Use solid backgrounds.",
+    "charts": "Shadcn/Recharts. Use monochrome base with primary/accent colors for data series. No gradients in charts, solid fills or 2px lines only.",
+    "tables": "Dense rows, 1px bottom border per row. Hover state must highlight the entire row with a subtle gray (surface_hover)."
+  },
+  "motion": {
+    "hover": "Instant or very fast (100ms) transition. Border color darken, slight background tint shift.",
+    "interactions": "Crisp feedback. No bounce or elastic easing. Use 'ease-out' or linear for a mechanical feel."
+  },
+  "icons": {
+    "library": "@phosphor-icons/react",
+    "style": "Regular or Bold weight. 20px (w-5 h-5) default size.",
+    "installation": "yarn add @phosphor-icons/react"
+  },
+  "media": {
+    "image_urls": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1725274417274-459b64c181cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMHdoaXRlJTIwYW5kJTIwcmVkJTIwcGF0dGVybnxlbnwwfHx8fDE3NzUxMjY2MDd8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract geometric pattern, strict grid lines, monochromatic with a single sharp red accent. For use on Login/Auth screens."
+      },
+      {
+        "category": "infrastructure",
+        "url": "https://images.pexels.com/photos/17489157/pexels-photo-17489157.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Detailed view of a server rack. Can be used in 'Settings' or 'Integrations' hero banner if needed."
+      }
+    ]
+  },
+  "pages_and_features": [
+    {
+      "name": "Dashboard Overview",
+      "layout": "Control Room Grid",
+      "details": "F-pattern layout. Top left: Active Agents, Success Rate. Right/Below: Modular bento grid for Agent Topology. Use line charts for execution success over time."
+    },
+    {
+      "name": "Agent Registry",
+      "layout": "Data Table View",
+      "details": "Dense list with robust global filtering. Top-right 'Create Agent' CTA."
+    },
+    {
+      "name": "Workflow DAG Visualization",
+      "layout": "Full Page Canvas",
+      "details": "Use Recharts/React Flow if DAG is needed. 1px connecting lines, sharp right-angle elbows, stark white nodes."
+    },
+    {
+      "name": "Execution Runs",
+      "layout": "Split Pane (Left List, Right Details)",
+      "details": "Left side: scrolling list of runs. Right side: Trace viewer (JSON-like logs, step-by-step progress bars)."
+    },
+    {
+      "name": "Policy Engine & Governance",
+      "layout": "Forms & Rules",
+      "details": "Bento layout for rules: Rate limiting inputs, cost tracking charts, HITL approval queue list."
+    },
+    {
+      "name": "Enterprise Integrations",
+      "layout": "Grid of Cards",
+      "details": "Cards representing Jira, Slack, Teams, Salesforce. 'Connect' or 'Manage' buttons. Simple SVG logos preferred (e.g., via lucide-react or phosphor)."
+    },
+    {
+      "name": "Authentication",
+      "layout": "Split Screen",
+      "details": "Left side uses the `hero_background` image overlaid with brand text. Right side is the stark login form."
+    }
+  ],
+  "accessibility_and_testing": {
+    "testing_attributes": "All interactive and key informational elements MUST include a `data-testid` attribute (e.g., `data-testid='login-form-submit-button'`).",
+    "contrast": "Ensure minimum 4.5:1 ratio for normal text. Use Text Shadow over images if needed."
+  },
+  "instructions_to_main_agent": [
+    "Install `@phosphor-icons/react` for icons.",
+    "Use Manrope for headings and IBM Plex Sans for body text.",
+    "Use strict grid layouts and cardless designs with 1px borders (rounded-none).",
+    "Follow the 'Color is Function Only' rule: 95% of UI is monochrome, blue/red/yellow are for actions/states.",
+    "Build the dashboard using a collapsible F-pattern sidebar."
+  ]
+}
